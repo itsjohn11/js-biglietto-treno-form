@@ -16,30 +16,46 @@
     </header>
 
     <main>
-        <h1>calcola il prezzo del tuo biglietto</h1>
+        <h1 class="center">calcola il prezzo del tuo biglietto</h1>
+
         <div class="container">
-
-            <label for="username surname">Nome Cognome</label>
-            <input class="form-control" type="text" id="username" autocomplete="off">
-
-            <label for="km">km da percorrere</label>
-            <input class="form-control" type="text" id="km" autocomplete="off">
-            
-            <label for="fascia d'èta">fascia d'èta</label>
-            <select id="fascia d'èta">
-                <option value="minorenne">Minorenne</option>
-                <option value="maggiorenne">maggiorenne</option>
-            </select>
-
-            <button type="submit" class="btn btn-primary">genera</button>
-            <button type="submit" class="btn btn-primary">annulla</button>
+            <form action="" id="ticket-form">
+                <div class="mb-2">
+                    <label for="nameSurname">Nome Cognome</label>
+                    <input class="form-control" type="text" id="nameSurname" autocomplete="off">
+                </div>
+                <div class="mb-2">
+                    <label for="kmToTravel">km da percorrere</label>
+                    <input class="form-control" type="text" id="kmToTravel" autocomplete="off">
+                </div>
+                <div class="mb-2">
+                        <label for="ageRange">ageRange</label>
+                    <select id="ageRange">
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                    </select>
+                </div>
+                <button type="generate" id="generate-btn" class="btn btn-primary mt-3">genera</button>
+                <button id="cancel-btn" class="btn btn-secondary mt-3">annulla</button>
+            </form> 
         </div>
 
         <h1>il tuo biglietto</h1>
-
+        
         <div class="container">
-             
+            <h1>Dettagli passeggero/i</h1>
 
+            <hr>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
         </div>
     </main>
     <footer>
