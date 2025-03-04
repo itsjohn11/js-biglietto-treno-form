@@ -26,6 +26,18 @@ Vi consigliamo di seguire questo ordine nella risoluzione dell'esercizio:
 const ticketForm = document.getElementById("ticket-form");
 console.log(ticketForm);
 
+ticketForm.addEventListener("generate", "cancel", manageGenerate );
+
+function manageGenerate(){
+    console.log("generate", "cancel");
+}
+
+
+
+
+
+
+
 const nameSurnameInput = document.getElementById("nameSurname");
 console.log("nameSurnameInput");
 const kmToTravelInput = document.getElementById("kmToTravel");
