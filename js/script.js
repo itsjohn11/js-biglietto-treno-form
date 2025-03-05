@@ -26,10 +26,10 @@ Vi consigliamo di seguire questo ordine nella risoluzione dell'esercizio:
 const ticketForm = document.getElementById("ticket-form");
 console.log(ticketForm);
 
-ticketForm.addEventListener("generate", "cancel", manageGenerate );
+ticketForm.addEventListener("generate",  manageSend);
 
-function manageGenerate(){
-    console.log("generate", "cancel");
+function manageSend(){
+    console.log("generate");
 }
 
 
@@ -42,6 +42,8 @@ const nameSurnameInput = document.getElementById("nameSurname");
 console.log("nameSurnameInput");
 const kmToTravelInput = document.getElementById("kmToTravel");
 console.log("kmInput");
+
+
 // const ageRangeOption = document.getElementById("AgeRange");
 // console.log("ageRangeSelect");
 
