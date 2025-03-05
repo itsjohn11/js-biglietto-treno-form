@@ -19,35 +19,65 @@ Vi consigliamo di seguire questo ordine nella risoluzione dell'esercizio:
 
 
 
-// const generateButton = document.getElementById("generate-btn");
-// console.log(generateButton);
-// const cancelButton = document.getElementById("cancel-btn");
-// console.log(cancelButton);
+//Preleviamo input e form
+
 const ticketForm = document.getElementById("ticket-form");
 console.log(ticketForm);
-
-ticketForm.addEventListener("generate",  manageSend);
-
-function manageSend(){
-    console.log("generate");
-}
-
-
-
-
-
-
 
 const nameSurnameInput = document.getElementById("nameSurname");
 console.log("nameSurnameInput");
 const kmToTravelInput = document.getElementById("kmToTravel");
 console.log("kmInput");
 
-
 // const ageRangeOption = document.getElementById("AgeRange");
 // console.log("ageRangeSelect");
 
-// generateButton.addEventListener("click", function(){
+//Preleviamo i risultati e stampiamoli nel biglietto
+
+
+
+
+ticketForm.addEventListener("generate",  manageSend);
+
+function manageSend(event){   
+    event.preventDEfault();
+    const nameSurname = nameSurnameInput.value;
+    const kmToTravel = kmToTravelInput.value;
+    console.log(kmToTravel);
+}
+
+
+
+// Calcolo del biglietto
+
+//     const prezzoFinale = kmStr * 0.21;
+//     console.log(prezzoFinale);
+
+// if (prezzoFinale){
+//     const prezzoFinale = kmStr * 0.21; 
+//     let x = 3.14; 
+// }
+// if (ageStr < 18 ){  
+//     const multipli = prezzoFinale * 80 / 100;
+//     console.log(multipli);
+// }else if (ageStr > 65) {
+//     const multipli = prezzoFinale * 60 / 100;
+//     console.log(multipli);
+// }else {
+
+// }
+
+
+
+
+// const generateButton = document.getElementById("generate-btn");
+// console.log(generateButton);
+// const cancelButton = document.getElementById("cancel-btn");
+// console.log(cancelButton);
+
+
+
+// generateButton.addEventListener("generate-btn", function(){
 //     console.log("dentro click listener");
 //     const nameSurname = nameSurnameInput.value;
 //     console.log(nameSurname); 
@@ -67,14 +97,14 @@ console.log("kmInput");
 
 // ticketform.addEventListener("submit", handleticketform);
 
-function handleticketform(event){
-    event.preventDefault();
-    console.log("ticketform");
-    const nameSurname = nameSurnameInput.ariaValueMax;
-    const km = kmInput.ariaValueMax;
-    const data = `${nameSurname} ${km}`;
-    console.log(data);
-}
+// function handleticketform(event){
+//     event.preventDefault();
+//     console.log("ticketform");
+//     const nameSurname = nameSurnameInput.ariaValueMax;
+//     const km = kmInput.ariaValueMax;
+//     const data = `${nameSurname} ${km}`;
+//     console.log(data);
+// }
 
 
 
