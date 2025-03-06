@@ -27,14 +27,14 @@ console.log(ticketForm);
 const nameSurnameInput = document.getElementById("nameSurname");
 console.log("nameSurnameInput");
 const kmToTravelInput = document.getElementById("kmToTravel");
-console.log("kmInput");
+console.log("kmToTraveInput");
 
 // const ageRangeOption = document.getElementById("AgeRange");
 // console.log("ageRangeSelect");
 
 //Preleviamo i risultati e stampiamoli nel biglietto
-
-
+const nameSurnameElem = document.querySelector(".table .passenger");
+console.log(nameSurnameElem);
 
 
 ticketForm.addEventListener("generate",  manageSend);
@@ -43,29 +43,57 @@ function manageSend(event){
     event.preventDEfault();
     const nameSurname = nameSurnameInput.value;
     const kmToTravel = kmToTravelInput.value;
-    console.log(kmToTravel);
+    
+    // Compilo biglietto
+    nameSurnameElem.innerText = nameSurname;
+
 }
 
 
 
 // Calcolo del biglietto
 
-//     const prezzoFinale = kmStr * 0.21;
-//     console.log(prezzoFinale);
+const kmPrice = 0.21;
+const userKmStr = prompt(`How many km will you travel?`);
+const userAgeStr = prompt(`How old are you?`);
+console.log(userKmStr, userKmStr);
 
-// if (prezzoFinale){
-//     const prezzoFinale = kmStr * 0.21; 
+const userKm = parseInt(userKmStr);
+const userAge = parseInt(userAgeStr);
+
+const basePrice = userKm * kmPrice;
+console.log(basePrice);
+
+let discount = 0;
+if (userAge < 18) {
+    discount = 20;
+} else if (userAge > 65) {
+    discount = 40;
+}
+console.log(discount);
+
+const finalPrice = basePrice - (basePrice * discount / 100);
+
+
+
+
+// const finalPrice = kmStr * 0.21;
+// console.log(finalPrice);
+
+// if (finalPrice){
+//     const finalPrice = kmStr * 0.21; 
 //     let x = 3.14; 
 // }
 // if (ageStr < 18 ){  
-//     const multipli = prezzoFinale * 80 / 100;
+//     const multipli = finalPrice * 80 / 100;
 //     console.log(multipli);
 // }else if (ageStr > 65) {
-//     const multipli = prezzoFinale * 60 / 100;
+//     const multipli = finalPrice * 60 / 100;
 //     console.log(multipli);
-// }else {
-
 // }
+// console.log(finalPrice);
+
+
 
 
 
