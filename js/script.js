@@ -74,7 +74,7 @@ console.log(discount);
 
 const finalPrice = basePrice - (basePrice * discount / 100);
 
-
+const message = Il prezzo 
 
 
 // const finalPrice = kmStr * 0.21;
